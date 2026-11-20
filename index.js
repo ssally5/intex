@@ -35,7 +35,11 @@ app.get("/new", (req, res) => {
   
 });
 
-const PORT = 3000;
+app.get("/health/live", (req, res) => {
+  res.status(200).send("OK");
+});
+
+const PORT = 8080;
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
